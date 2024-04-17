@@ -5,8 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+var newDiv = document.createElement("div");
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Optionally set some properties
+newDiv.id = "newDivId";
+newDiv.className = "new-div-class";
+newDiv.textContent = "This is a new div.";
+
+// Attach the new div to the document body
+document.body.appendChild(newDiv);
+
+const root = ReactDOM.createRoot(newDiv);
 root.render(
   <React.StrictMode>
     <App />

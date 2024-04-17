@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import RunScript from './assets/RunScript';
+import ScriptCards from './assets/ScriptCards';
 import Progress from './assets/Progress';
 import Admin from './assets/Admin';
-import './App.css'; // Make sure this import remains
+import './App.css';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
         {/* Tab content */}
         <div className="tab-content">
           <Routes>
-            <Route path="/" element={<RunScript />} />
+            <Route path="/" element={<ScriptCards />} />
             <Route path="/progress" element={<Progress />} />
             <Route path="/admin" element={<Admin />} />
           </Routes>

@@ -1,28 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScriptCards from './assets/ScriptCards';
 import Progress from './assets/Progress';
 import Admin from './assets/Admin';
+import NavTabs from './assets/NavTab'; // Import NavTabs component
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <Router>
       <div className="App">
         {/* Top bar container */}
-        <div className="top-bar">
+        <div className="d-flex justify-content-between align-items-center top-bar">
           {/* Navigation tabs */}
-          <nav className="nav nav-tabs">
-            <NavLink to="/" className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")} end>
-              Run Script
-            </NavLink>
-            <NavLink to="/progress" className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}>
-              Progress
-            </NavLink>
-            <NavLink to="/admin" className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}>
-              Admin
-            </NavLink>
-          </nav>
+          <NavTabs /> {/* Use NavTabs component */}
 
           {/* Minimize button */}
           <button className="minimize-button btn btn-outline-secondary" onClick={() => window.minimize()}>Minimize</button>

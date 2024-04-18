@@ -15,7 +15,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'] // This can be moved to a .babelrc file
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
       },
